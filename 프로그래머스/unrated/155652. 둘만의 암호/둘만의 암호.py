@@ -5,10 +5,6 @@ def solution(s, skip, index):
         engs.pop(engs.index(i))
 
     for i in s:
-        temp = ''
-        try:
-            temp = engs[engs.index(i) + index]
-        except:
-            temp = engs[(engs.index(i) + index) % len(engs)]
+        temp = engs[(engs.index(i) + index) % len(engs)]
         answer += temp
     return answer
